@@ -803,3 +803,421 @@ a {
 }
 
 /* End Features */
+/* Start Testimonials */
+.testimonials {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background-color: var(--section-background);
+}
+
+.testimonials .main-title {
+    margin-bottom: 80px;
+}
+
+.testimonials .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 45px;
+}
+
+.testimonials .card {
+    position: relative;
+    background-color: white;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 6px;
+    height: 289px;
+}
+
+.testimonials .card img {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: -10px;
+    top: -40px;
+    border: 10px solid var(--section-background);
+    border-radius: 50%;
+}
+
+.testimonials .card .main-definition {
+    float: right;
+    line-height: 1.8;
+}
+
+.testimonials .card h3 {
+    margin: 0;
+}
+
+.testimonials .card span {
+    color: var(--paragraph-color);
+}
+
+.testimonials .card .rate i.filled {
+    color: #ffc107;
+}
+
+.testimonials .card p {
+    float: left;
+    margin: 15px 0 0;
+    color: var(--paragraph-color);
+    line-height: 1.5;
+}
+
+/* End Testimonials */
+/* Start Team Members */
+.team-members {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding)
+}
+
+.team-members .main-title {
+    margin-bottom: 150px;
+}
+
+.team-members .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.team-members .box {
+    position: relative;
+}
+
+.team-members .box::before {
+    content: "";
+    position: absolute;
+    background-color: var(--section-background);
+    width: calc(100% - 60px);
+    height: 100%;
+    right: 0;
+    top: 0;
+    border-radius: 10px;
+    z-index: -2;
+}
+
+.team-members .box::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: #e4e4e4;
+    border-radius: 10px;
+    z-index: -1;
+    transition: var(--main-transition-duration);
+}
+
+.team-members .box:hover::after {
+    width: calc(100% - 60px);
+}
+
+.team-members .box .data {
+    display: flex;
+    align-items: center;
+    padding-top: 60px;
+}
+
+.team-members .box .data img {
+    width: calc(100% - 60px);
+    border-radius: 10px;
+    transition: var(--main-transition-duration);
+}
+
+.team-members .box:hover .data img {
+    filter: grayscale(100%);
+}
+
+.team-members .box .data .links {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.team-members .box .data .links a {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.team-members .box .data .links a i {
+    color: var(--paragraph-color);
+    transition: var(--main-transition-duration);
+}
+
+.team-members .box .data .links a:hover i {
+    color: var(--main-color);
+}
+
+.team-members .box .info {
+    padding-left: 80px;
+}
+
+.team-members .box .info h2 {
+    color: var(--main-color);
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 0;
+    transition: var(--main-transition-duration);
+}
+
+.team-members .box:hover .info h2 {
+    color: var(--paragraph-color);
+}
+
+.team-members .box .info P {
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+/* End Team Members */
+/* Start Services */
+.services {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background-color: var(--section-background);
+}
+
+.services .main-title {
+    margin-bottom: 80px;
+}
+
+.services .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.services .srv {
+    background-color: white;
+    box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
+    counter-increment: services;
+    transition: var(--main-transition-duration);
+    position: relative;
+}
+
+.services .srv::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -3px;
+    width: 0;
+    height: 3px;
+    background-color: var(--main-color);
+    transition: var(--main-transition-duration);
+}
+
+.services .srv:hover {
+    transform: translateY(-10px);
+}
+
+.services .srv:hover::before {
+    width: 100%;
+}
+
+.services .srv>i {
+    color: #d5d5d5;
+    margin: 40px auto 20px;
+    display: block;
+    text-align: center;
+}
+
+.services .srv>h3 {
+    text-align: center;
+    margin: 20px 0 40px;
+    font-size: 25px;
+    color: var(--main-color);
+}
+
+.services .srv .info {
+    padding: 15px;
+    position: relative;
+    background-color: #f9f9f9;
+    text-align: right;
+}
+
+.services .srv .info a {
+    color: var(--main-color);
+}
+
+.services .srv .info::before {
+    content: "0" counter(services);
+    position: absolute;
+    background-color: var(--main-color);
+    color: white;
+    left: 0;
+    top: 0;
+    width: 80px;
+    height: 100%;
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 15px;
+}
+
+.services .srv .info::after {
+    content: "";
+    position: absolute;
+    background-color: #d5d5d5;
+    top: 0;
+    left: 80px;
+    height: 100%;
+    width: 50px;
+    transform: skewx(-30deg);
+}
+
+/* End Services */
+/* Start Skills */
+.our-skills {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    position: relative;
+}
+
+.our-skills .main-title {
+    margin-bottom: 80px;
+}
+
+.our-skills .container {
+    display: flex;
+    align-items: center;
+}
+
+@media(max-width: 991px) {
+    .our-skills img {
+        display: none;
+    }
+}
+
+.our-skills .skills {
+    flex: 1;
+}
+
+.our-skills .skill h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.our-skills .skill h3 span {
+    font-size: 12px;
+    border: 1px solid #ccc;
+    padding: 3px 5px;
+    border-radius: 4px;
+    color: var(--main-color);
+}
+
+.our-skills .skill .the-progress {
+    height: 30px;
+    background-color: #eee;
+    position: relative;
+}
+
+.our-skills .skill .the-progress span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: var(--main-color);
+}
+
+/* End Skills */
+/* Start Work Steps */
+.work-steps {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background-color: var(--section-background);
+}
+
+.work-steps .main-title {
+    margin-bottom: 80px;
+}
+
+.work-steps .container {
+    display: flex;
+    align-items: center;
+}
+
+.work-steps .boxs-holder {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.work-steps .container>img {
+    margin-right: 100px;
+}
+
+@media(max-width: 991px) {
+    .work-steps .container {
+        flex-direction: column;
+    }
+
+    .work-steps .container>img {
+        margin: 0 0 100px;
+    }
+}
+
+@media(max-width: 767px) {
+    .work-steps .container>img {
+        display: none;
+    }
+}
+
+.work-steps .boxs-holder .box {
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    background-color: #f6f5f5;
+    border: 2px solid white;
+    border-radius: 6px;
+    z-index: 1;
+    overflow: hidden;
+    position: relative;
+}
+
+.work-steps .boxs-holder .box::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    background-color: #ededed;
+    transition: var(--main-transition-duration);
+    z-index: -1;
+}
+
+.work-steps .boxs-holder .box:hover::before {
+    width: 100%;
+    height: 100%;
+}
+
+.work-steps .boxs-holder .box img {
+    width: 64px;
+    margin-right: 30px;
+}
+
+.work-steps .boxs-holder .box .text h3 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.work-steps .boxs-holder .box .text p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: var(--paragraph-color);
+    padding: 10px 0 0;
+    margin: 0;
+}
+
+/* End Work Steps */
