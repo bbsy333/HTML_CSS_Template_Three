@@ -212,7 +212,7 @@ a {
     .header .main-nav>li>a {
         font-size: 13px;
         height: 40px;
-        padding: 0 20px;
+        padding: 0 18px;
         transition: none;
     }
 
@@ -1232,7 +1232,7 @@ a {
     flex-wrap: wrap;
 }
 
-.dots {
+.event .container .dots {
     background-image: url(../imgs/dots.png);
     position: absolute;
     width: 204px;
@@ -1240,12 +1240,12 @@ a {
     background-repeat: no-repeat;
 }
 
-.dots-up {
+.event .container .dots-up {
     top: 200px;
     right: 0;
 }
 
-.dots-down {
+.event .container.dots-down {
     bottom: 200px;
     left: 0;
 }
@@ -1393,30 +1393,40 @@ a {
     padding-bottom: var(--section-padding);
     background-color: var(--section-background);
     position: relative;
+    z-index: -2;
 }
 
 .pricing .container {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 
-.dots {
+.pricing .container .dots {
     background-image: url(../imgs/dots.png);
     position: absolute;
     width: 204px;
     height: 186px;
     background-repeat: no-repeat;
+    z-index: -1;
+    transition: var(--main-transition-duration);
 }
 
-.dots-up {
+.pricing .container .dots-up {
     top: 200px;
     right: 0;
 }
 
-.dots-down {
+.pricing .container .dots-down {
     bottom: 200px;
     left: 0;
+}
+
+@media(max-width: 1200px) {
+    .dots {
+        opacity: 0;
+    }
 }
 
 /* End Pricing */
