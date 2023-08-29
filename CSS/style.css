@@ -210,7 +210,7 @@ a {
 
 @media(max-width: 767px) {
     .header .main-nav>li>a {
-        font-size: 13px;
+        font-size: 12px;
         height: 40px;
         padding: 0 18px;
         transition: none;
